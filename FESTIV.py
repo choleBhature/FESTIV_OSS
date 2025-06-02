@@ -36,6 +36,7 @@ import os
 import sys
 from settings import *
 from reset_settings import *
+from DETECT_HARDWARE_OPTIONS import *
 
 warnings.filterwarnings('ignore')
 
@@ -56,4 +57,9 @@ else:
 
 reset_settings_to_zero(use_float=True)
 execution_from_previous=0;
+
+# #Detect Hardware Options Now!
+
+detect_hardware_options()
+
 
