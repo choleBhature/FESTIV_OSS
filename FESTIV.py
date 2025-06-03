@@ -37,6 +37,8 @@ import sys
 from settings import *
 from reset_settings import *
 from DETECT_HARDWARE_OPTIONS import *
+from FESTIV_ADDL_OPTIONS import *
+import matplotlib
 
 warnings.filterwarnings('ignore')
 
@@ -62,4 +64,10 @@ execution_from_previous=0;
 
 detect_hardware_options()
 
+#User options to be seen throughout , a number of different options to change from default values if the user wishes to modify the file 
+festiv_addl_options()
+
+if (matplotlib.get_backend().lower().startswith('qt')) and use_gui:
+    # print("code working fine till now , now use WINDOWS")
+    pass
 

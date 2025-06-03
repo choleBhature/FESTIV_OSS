@@ -27,4 +27,14 @@ def detect_hardware_options():
         print("NO GUI mode enabled (use_gui was set to False)")
 
     else:
-        print("Tussi to windows mai ho Paaji")
+        print("GUI can run on this!")
+
+    if settings.on_hpc:
+        pass
+        #write the code for gams solver flags
+    
+    if platform.system() in ['Linux']:
+        pass
+        #write the code here for completing the windows path
+    
+    
