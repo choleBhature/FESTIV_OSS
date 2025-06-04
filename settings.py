@@ -58,3 +58,17 @@ RTCPrintResults = 0
 RTDPrintResults = 0
 
 eps = 0
+
+cancel = 0
+
+finishedrunningFESTIV=0
+numberofFESTIVrun=0
+
+start_time=0
+
+tStart = 0 
+tic = 0
+
+multiplefilecheck=0
+
+gamspath=""

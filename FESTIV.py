@@ -39,6 +39,10 @@ from reset_settings import *
 from DETECT_HARDWARE_OPTIONS import *
 from FESTIV_ADDL_OPTIONS import *
 import matplotlib
+from FESTIVBANNER import *
+from getsgamspath import *
+from DECLARE_INDICES import *
+
 
 warnings.filterwarnings('ignore')
 
@@ -69,5 +73,43 @@ festiv_addl_options()
 
 if (matplotlib.get_backend().lower().startswith('qt')) and use_gui:
     # print("code working fine till now , now use WINDOWS")
-    pass
+    #instead of loading TEMPWS , I have converted the TEMPWS file to the setting2.py file
+    cancel = 1
+    #festivGUI 
+    #no need for time and other function as GUI will handle that
 
+    finishedrunningFESTIV=0
+    numberofFESTIVrun=1
+
+while(finishedrunningFESTIV!=1):
+    if cancel==0:
+        if execution_from_previous==0 or time==start_time:
+            tStart = tic
+            festiv_banner()
+
+#Data and Initialization
+
+#Load Data for new FESTIV runs if using multiple runs
+qq = f'settings{numberofFESTIVrun}.py'
+if multiplefilecheck:
+    qq_final = qq
+    #declare the input path
+
+#now adding the GAMS PATH 
+gamspath=getgamspath()
+
+
+#Directory wala code (imo not needed in python)
+    # DIRECTORY = [pwd,filesep];
+    # %add path for unique model characteristics.
+
+    # addpath(strcat(DIRECTORY,filesep, 'MODEL_RULES'));  
+
+# this part is also not valid as GUI variables are saved on the spot to settings.py file
+    # %Gather in the information provided as part of the GUI inputs
+    # INITIALIZE_VARIABLES_FROM_GUI_INPUTS
+
+#setting indices based on how user input file is listed
+load_all_indices()
+
+    
